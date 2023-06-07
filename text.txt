@@ -1,0 +1,192 @@
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import "../styles/Checkout.css";
+import { useLocation } from "react-router-dom";
+
+function Checkout() {
+  //used to get the passed ItemId
+  const location = useLocation();
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    country: "",
+    city: "",
+    state: "",
+    street: "",
+    building: "",
+    Q: "",
+    size: "",
+    ItemId: "",
+    total: "",
+  });
+
+  useEffect(() => {
+    // Get the ItemId from the query parameter
+    const searchParams = new URLSearchParams(location.search);
+    const ItemId = searchParams.get("ItemId");
+
+    // Update the state with the ItemId
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      ItemId: ItemId,
+    }));
+  }, [location]);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/Orders/",
+        formData,
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+
+
+  return (
+    <form className="form-checkout" onSubmit={handleSubmit}>
+      <label>
+        First Name:
+        <input
+          type="text"
+          name="firstName"
+          value={formData.firstName}
+          onChange={handleChange}
+          required
+        />
+      </label>
+      <label>
+        Last Name:
+        <input
+          type="text"
+          name="lastName"
+          value={formData.lastName}
+          onChange={handleChange}
+          required
+        />
+      </label>
+      <label>
+        Email:
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+      </label>
+      <label>
+        Phone:
+        <input
+          type="tel"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+        />
+      </label>
+      <label>
+        Country:
+        <input
+          type="text"
+          name="country"
+          value={formData.country}
+          onChange={handleChange}
+          required
+        />
+      </label>
+      <label>
+        City:
+        <input
+          type="text"
+          name="city"
+          value={formData.city}
+          onChange={handleChange}
+          required
+        />
+      </label>
+      <label>
+        State:
+        <input
+          type="text"
+          name="state"
+          value={formData.state}
+          onChange={handleChange}
+          required
+        />
+      </label>
+      <label>
+        Street:
+        <input
+          type="text"
+          name="street"
+          value={formData.street}
+          onChange={handleChange}
+          required
+        />
+      </label>
+      <label>
+        building:
+        <input
+          type="text"
+          name="building"
+          value={formData.building}
+          onChange={handleChange}
+          required
+        />
+      </label>
+
+      <label>
+        Q:
+        <input
+          type="number"
+          name="Q"
+          value={formData.Q}
+          onChange={handleChange}
+          required
+        />
+      </label>
+
+      <label>
+        Size:
+        <input
+          type="text"
+          name="size"
+          value={formData.size}
+          onChange={handleChange}
+          required
+        />
+      </label>
+      {/* <label>
+        total:
+        <input
+          type="number"
+          name="total"
+          value={formData.total}
+          onChange={handleChange}
+          required
+          disabled
+        />
+      </label> */}
+
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+
+export default Checkout;

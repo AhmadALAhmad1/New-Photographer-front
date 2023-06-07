@@ -1,0 +1,125 @@
+/* body {
+  background: #f6eded;
+} */
+.container {
+  max-width: 85%;
+  margin: auto;
+  width: 100%;
+  padding: 0 15px;
+  overflow: auto;
+}
+.h1-adminshop {
+  color: #850000;
+}
+#table-container {
+  overflow: auto;
+}
+table {
+  max-width: 100%;
+  text-align: center;
+  min-width: 50rem;
+  width: 100%;
+}
+table tbody:last-child {
+  box-shadow: 0px 1px #850000;
+}
+table tbody tr:nth-child(even) {
+  background-color: #85000012;
+}
+table thead {
+  background: #850000;
+  color: white;
+}
+table tbody:last-child td {
+  padding: 19px 0;
+}
+td img {
+  width: 90px;
+  height: auto;
+}
+th {
+  min-width: 3rem;
+  font-size: 14px;
+  padding: 15px 10px;
+}
+td {
+  padding: 10px;
+  font-size: 13px;
+}
+.Remove {
+  background: #850000;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Add,
+#addTotable {
+  color: #850000;
+  border: 1px solid #850000;
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-group label {
+  display: block;
+  margin-top: 1rem;
+}
+.tabel-container-admin input[type="text"] {
+  outline: none;
+  /* border: 1px solid #850000; */
+  width: -webkit-fill-available;
+  padding: 7px;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+.input-group:focus-within label {
+  color: #850000;
+}
+.btn-group {
+  width: fit-content;
+  margin: 2rem auto 1rem;
+  margin-right: 0;
+}
+.items-h1 {
+  text-align: center;
+}
+.select-items {
+  margin-left: 90%;
+}
+
+.action-button {
+  margin-bottom: 5px;
+}
+
+.action-button-delete {
+  background-color: rgb(153, 13, 13);
+  color: white;
+  padding: 10px 10px;
+  border-radius: 13px;
+}
+
+.action-button-update {
+  background-color: red;
+  color: white;
+  margin-bottom: 5px;
+  padding: 10px 10px;
+  border-radius: 13px;
+}
+
+.btn-add {
+  position: absolute;
+  padding: 7px;
+  left: 0;
+  margin: 20px;
+  text-decoration: none;
+  background-color: rgb(106, 221, 106);
+  color: white;
+  border: 1px solid white;
+}
+
+#table-container {
+  margin-bottom: 80px; /* Add a margin to the bottom of the container to make space for the link */
+}

@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  /* opacity: 0.5; */
+  /* background-color: black; */
+}
+
+.navigation-bar {
+  display: flex;
+  margin-left: 650px;
+  justify-content: space-evenly;
+  width: 50%;
+  margin-top: 20px;
+  gap: 5px;
+}
+
+.logo {
+  margin: auto 0;
+}
+
+/* Logout Icon CSS*/
+.logout-btn {
+  background-color: black;
+  color: white;
+  border: none;
+}
+.logout-btn:hover::after {
+  content: "logout";
+  font-size: large;
+}
+
+/* Login Icon CSS*/
+.header-login-btn {
+  background-color: black;
+
+  color: white;
+  border: none;
+}
+.header-login-btn:hover::after {
+  content: "login";
+  font-size: large;
+}

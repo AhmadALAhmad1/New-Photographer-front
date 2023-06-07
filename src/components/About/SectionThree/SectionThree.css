@@ -1,0 +1,110 @@
+.about--section-three-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: "Jost", sans-serif;
+  height: 600px;
+  gap: 9rem;
+  padding-bottom: 60px;
+  margin-top: 0px;
+}
+.about--section-three-column-two,
+.about--section-three-even-column-one {
+  display: flex;
+  flex-direction: column;
+}
+
+.about--section-three-column-one {
+  width: 400px;
+  height: 450px;
+  background-color: #2b2b2b;
+  margin-top: 100px;
+}
+.dots-background-three,
+.dots-background-three-even {
+  width: 20px;
+  height: 20px;
+}
+
+.dots-background-three {
+  gap: 10px;
+  /* height: 5px; */
+  margin: 0px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.about-section-three-image {
+  height: 450px;
+  width: 400px;
+  transition: transform 0.2s ease-out;
+}
+.about-section-three-image:hover,
+.about-section-three-even-image:hover {
+  transform: scale(0.96);
+}
+
+.about--section-three-title,
+.about--section-three-even-title {
+  font-size: 2.2rem;
+  font-weight: 550;
+  text-align: start;
+  width: 560px;
+}
+.about--section-three-description,
+.about--section-three-even-description {
+  text-align: start;
+  font-size: 1.1rem;
+  margin-top: 0px;
+  width: 550px;
+}
+
+.about--section-three-even-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Jost", sans-serif;
+  height: 680px;
+  gap: 9rem;
+}
+
+.about--section-three-even-column-two {
+  width: 470px;
+  height: 400px;
+  background-color: #2b2b2b;
+}
+
+.dots-background-three-even {
+  /* height: 5px; */
+  margin: 0px;
+  margin-top: 30px;
+  margin-left: -30px;
+}
+
+.about-section-three-even-image {
+  height: 400px;
+  width: 470px;
+  transition: transform 0.2s ease-out;
+}
+
+.about--section-three-container-even-odd {
+  gap: 0px;
+  background-image: url("backgroundsectionsparallax.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about--section-three-container,
+.about--section-three-even-container {
+  margin-top: -150px;
+}

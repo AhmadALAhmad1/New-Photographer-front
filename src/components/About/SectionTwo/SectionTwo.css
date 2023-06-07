@@ -1,0 +1,148 @@
+.about--section-two-container {
+  background-color: #1b1b1b;
+  height: 700px;
+  color: whitesmoke;
+  text-align: start;
+  padding-left: 400px;
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+.horizontal {
+  border: none;
+  background-color: grey;
+  /* color: whitesmoke; */
+  height: 1px;
+  width: 470px;
+  margin-left: 0px;
+}
+.about--section-two-card-container {
+  margin: auto;
+  width: 360px;
+  position: relative;
+  overflow: hidden;
+  font-family: "Jost";
+  color: whitesmoke;
+}
+
+.team-cards {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-self: center;
+
+  gap: 3rem;
+}
+
+.about--section-two-card-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.about--section-two-card-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: filter 0.5s ease;
+  z-index: 0;
+}
+
+.about--section-two-card-container:hover .overlay-text {
+  transform: translateY(8%);
+}
+
+.overlay-text {
+  position: absolute;
+  height: 100%;
+  bottom: 0;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transform: translateY(100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.overlay-text h2 {
+  font-weight: 400;
+  margin-top: 0;
+}
+.overlay-text p {
+  display: flex;
+  font-weight: 100;
+  justify-self: center;
+  width: 90%;
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+
+.test {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 60px;
+  margin-left: -80px;
+}
+
+#disabled {
+  color: #1b1b1b;
+  display: flex;
+  align-self: center;
+  width: 32px;
+  height: 30px;
+}
+
+#enabled {
+  height: 30px;
+  display: flex;
+  align-self: center;
+  background-color: #1b1b1b;
+  box-shadow: none;
+  width: 20px;
+  color: grey;
+}
+
+#enabled:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid grey;
+  color: grey;
+}
+
+/* .css-sghohy-MuiButtonBase-root-MuiButton-root{
+} */
+
+#disabled:hover{
+  background-color: #1b1b1b;
+}
+
+/* #buttons{
+  background-color:#1b1b1b;
+  border: none;
+  box-shadow: none;
+  background-color: red;
+ font-size: .8rem;
+ gap: 1rem;
+} */
+
+/* #carousel-control-button{
+  height: 30px;
+  border: none;
+  background-color: #1b1b1b;
+  color: whitesmoke;
+  font-weight: 100;
+  align-self: center;
+  justify-self: center;
+
+} */
