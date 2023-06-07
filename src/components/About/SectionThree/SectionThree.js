@@ -5,7 +5,7 @@ import './SectionThree.css'
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const url = "http://localhost:5000/api/about/";
+// const url = `https://jayy-pos5.onrender.com/api/about/`;
 
 function SectionThree() {
   const [info, setInfo] = useState([]);
@@ -14,15 +14,21 @@ function SectionThree() {
     getAllInfo();
   }, []);
 
-  const getAllInfo = async() => {
-    await axios
-      .get(`${url}`)
-      .then((response) => {
-        setInfo(response.data);
-      })
-      .catch((error) => console.error(`Error: ${error}`));
-  };
+  const getAllInfo = async () => {
 
+    try {
+
+      const response = await axios.get('https://jayy-pos5.onrender.com/api/about/');
+      setInfo(response.data);
+      console.log(response);
+      // console.log(response.data)
+ 
+
+    } catch (error) {
+      
+      console.error(`Error: ${error}`);
+    }
+  };
   const filteredCards = info.filter((object) => object.section === "3");
 
   const cards = filteredCards.map((object, index) => {

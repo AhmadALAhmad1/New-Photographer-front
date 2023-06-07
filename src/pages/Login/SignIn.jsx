@@ -29,10 +29,13 @@ const SignIn = ({ onSignupClick }) => {
       "Authorization"
     ] = `Bearer ${localStorage.getItem("token")}`;
     try {
-      const res = await axios.post("http://localhost:5000/api/users/login", {
-        email,
-        password,
-      });
+      const res = await axios.post(
+        `https://jayy-pos5.onrender.com/api/users/login`,
+        {
+          email,
+          password,
+        },
+      );
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("role", res.data.role);
       console.log(res.data.role);

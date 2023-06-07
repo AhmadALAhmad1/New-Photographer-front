@@ -15,7 +15,7 @@ const UserInfo = () => {
   const getAllUsers = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/users/getall",
+        "https://jayy-pos5.onrender.com/api/users/getall",
       );
       setUsers(data.user);
     } catch (error) {
@@ -32,7 +32,7 @@ const UserInfo = () => {
       });
       if (result.isConfirmed) {
         await axios.delete(
-          `http://localhost:5000/api/users/delete/${user._id}`,
+          `https://jayy-pos5.onrender.com/api/users/delete/${user._id}`,
         );
         getAllUsers();
       }

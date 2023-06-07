@@ -19,7 +19,7 @@ export const Services = () => {
 
   useEffect(() => {
     axios
-      .get(`${API_URL}/services`)
+      .get(`https://jayy-pos5.onrender.com/api/services`)
       .then((res) => {
         setStudentServices(
           res.data.filter((service) => service.status === "student")
@@ -33,7 +33,7 @@ export const Services = () => {
 
   useEffect(() => {
     axios
-      .get(`${API_URL}/images`)
+      .get(`https://jayy-pos5.onrender.com/api/images`)
       .then((res) => setSide_images(res.data))
       .catch((err) => console.log(err));
   }, []);

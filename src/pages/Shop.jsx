@@ -26,7 +26,9 @@ const Shop = () => {
   //GET ALL
   const getAllItems = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/Items/");
+      const { data } = await axios.get(
+        "http://jayy-pos5.onrender.com/api/Items/",
+      );
       setItems(data.data);
       console.log(data.data);
     } catch (error) {

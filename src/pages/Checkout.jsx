@@ -28,7 +28,7 @@ function Checkout() {
     const calculateTotal = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:5000/api/Items/${formData.ItemId}`
+          `https://jayy-pos5.onrender.com/api/Items/${formData.ItemId}`,
         );
         const itemPrice = data.data.price;
         const total = itemPrice * formData.Q;
@@ -49,7 +49,7 @@ function Checkout() {
     try {
       // fetch the item from the database
       const { data } = await axios.get(
-        `http://localhost:5000/api/Items/${formData.ItemId}`
+        `https://jayy-pos5.onrender.com/api/Items/${formData.ItemId}`,
       );
 
       const itemPrice = data.data.price;
@@ -76,8 +76,8 @@ function Checkout() {
 
       // send the form data to the server
       const response = await axios.post(
-        "http://localhost:5000/api/Orders/",
-        formData
+        "https://jayy-pos5.onrender.com/api/Orders/",
+        formData,
       );
 
       console.log("Server response:", response.data);

@@ -33,7 +33,7 @@ const UpdateItem = () => {
       }
 
       const response = await axios.put(
-        `http://localhost:5000/api/Items/${itemID}`,
+        `https://jayy-pos5.onrender.com/api/Items/${itemID}`,
         formData,
         {
           headers: {
@@ -63,7 +63,7 @@ const UpdateItem = () => {
     const getById = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/Items/${itemID}`,
+          `https://jayy-pos5.onrender.com/api/Items/${itemID}`,
         );
         const item = response.data.data;
         setFormData({

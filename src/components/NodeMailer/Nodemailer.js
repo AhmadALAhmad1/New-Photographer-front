@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 
-const url = "http://localhost:5000/api/contact";
+const url = `https://jayy-pos5.onrender.com/api/contact`;
 
 
 function Nodemailer() {
@@ -59,4 +59,4 @@ function Nodemailer() {
 }
 
 
-export default  Nodemailer
+export default Nodemailer

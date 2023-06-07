@@ -1,11 +1,6 @@
 import React, { useRef, useState } from "react";
-import "../Login/SignUp.css"
-import {
-  FaRegUserCircle,
-  FaLock,
-  FaRegEnvelope,
-
-} from "react-icons/fa";
+import "../Login/SignUp.css";
+import { FaRegUserCircle, FaLock, FaRegEnvelope } from "react-icons/fa";
 import axios from "axios";
 
 const SignUp = ({ onBackToLoginClick, setIsLogin }) => {
@@ -19,7 +14,7 @@ const SignUp = ({ onBackToLoginClick, setIsLogin }) => {
 
   const fetchRegister = async () => {
     try {
-      await axios.post("http://localhost:5000/api/users/register", {
+      await axios.post(`https://jayy-pos5.onrender.com/api/users/register`, {
         username,
         email,
         password,
@@ -37,14 +32,14 @@ const SignUp = ({ onBackToLoginClick, setIsLogin }) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Check if all fields are filled
     if (!username || !email || !password) {
       setErrMsg("Please fill out all required fields");
       setTimeout(() => setErrMsg(""), 3000);
       return;
     }
-    
+
     // Check if email is valid
     const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
     if (!emailRegex.test(email)) {
@@ -53,27 +48,27 @@ const SignUp = ({ onBackToLoginClick, setIsLogin }) => {
       emailRef.current.focus();
       return;
     }
-    
+
     // Check if password is at least 8 characters long
     if (password.length < 8) {
       setErrMsg("Password must be at least 8 characters long");
       setTimeout(() => setErrMsg(""), 3000);
       return;
     }
-  
+
     fetchRegister();
   };
-  
+
   // const handleSubmit = (e) => {
   //   e.preventDefault();
-    // if (username && email && password && location && phoneNumber) {
-    //   fetchRegister();
-    //   onBackToLoginClick();
-    // } else {
-    //   console.log("Please fill out all required fields");
-    // }
-    // fetchRegister();
-    // setIsLogin(true)
+  // if (username && email && password && location && phoneNumber) {
+  //   fetchRegister();
+  //   onBackToLoginClick();
+  // } else {
+  //   console.log("Please fill out all required fields");
+  // }
+  // fetchRegister();
+  // setIsLogin(true)
   // };
 
   return (

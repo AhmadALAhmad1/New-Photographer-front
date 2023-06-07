@@ -12,7 +12,7 @@ export const GridPopupForm = ({ photos = [], onSuccess, onError, visible }) => {
   const handleFormSubmit = async () => {
     await items.forEach(async (item) => {
       await axios({
-        url: `${API_URL}/images/${item.i}`,
+        url: `https://jayy-pos5.onrender.com/api/images/${item.i}`,
         data: {
           x: item.x,
           y: item.y,

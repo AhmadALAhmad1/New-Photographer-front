@@ -8,11 +8,14 @@ const UserMenu = () => {
   useEffect(() => {
     const fetchUserInfo = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/users/me", {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
+        const response = await axios.get(
+          `https://jayy-pos5.onrender.com/api/users/me`,
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
           },
-        });
+        );
         setUserInfo(response.data);
       } catch (error) {
         console.log(error);

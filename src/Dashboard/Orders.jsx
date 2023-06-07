@@ -14,7 +14,9 @@ export const Orders = () => {
   // GET ALL
   const getAllOrders = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/Orders/");
+      const { data } = await axios.get(
+        "https://jayy-pos5.onrender.com/api/Orders/",
+      );
       setOrders(data);
       console.log(data);
     } catch (error) {
@@ -31,7 +33,9 @@ export const Orders = () => {
       });
 
       if (result.isConfirmed) {
-        await axios.delete(`http://localhost:5000/api/Orders/${order._id}`);
+        await axios.delete(
+          `https://jayy-pos5.onrender.com/api/Orders/${order._id}`,
+        );
         getAllOrders(); // when finished deleting, call products again to refresh
       }
     } catch (error) {
@@ -125,4 +129,3 @@ export const Orders = () => {
     </>
   );
 };
-

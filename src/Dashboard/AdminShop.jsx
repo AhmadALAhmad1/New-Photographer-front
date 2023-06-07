@@ -27,7 +27,9 @@ const AdminShop = () => {
   // GET ALL
   const getAllItems = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/Items/");
+      const { data } = await axios.get(
+        `https://jayy-pos5.onrender.com/api/Items/`,
+      );
       setItems(data.data);
       console.log(data.data);
     } catch (error) {
@@ -44,7 +46,9 @@ const AdminShop = () => {
       });
 
       if (result.isConfirmed) {
-        await axios.delete(`http://localhost:5000/api/Items/${item._id}`);
+        await axios.delete(
+          `https://jayy-pos5.onrender.com/api/Items/${item._id}`,
+        );
         getAllItems(); // when finished deleting, call products again to refresh
       }
     } catch (error) {

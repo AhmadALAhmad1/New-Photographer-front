@@ -8,7 +8,7 @@ export const ImageQuer = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await axios.get("/api/images?section=1&page=home");
+        const response = await axios.get(`https://jayy-pos5.onrender.com/api/images?section=1&page=home`);
         setImages(response.data);
       } catch (error) {
         console.log(error);

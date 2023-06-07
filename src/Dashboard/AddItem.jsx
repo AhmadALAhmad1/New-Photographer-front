@@ -28,7 +28,7 @@ function AddItem() {
       formData.append("category", category);
 
       const response = await axios.post(
-        "http://localhost:5000/api/Items/",
+        `https://jayy-pos5.onrender.com/api/Items/`,
 
         formData,
         {

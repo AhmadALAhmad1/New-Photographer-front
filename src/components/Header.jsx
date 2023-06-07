@@ -20,7 +20,7 @@ export const Header = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("http://localhost:5000/api/users/logout");
+      await axios.post(`https://jayy-pos5.onrender.com/api/users/logout`);
       localStorage.removeItem("token");
       localStorage.removeItem("role");
       navigate("/");
@@ -33,7 +33,6 @@ export const Header = () => {
   const homePath = adminLoggedIn ? "/dashboard" : "";
   const homePath1 = adminLoggedIn ? "/dashboard/userinfo" : "";
   const homePath2 = adminLoggedIn ? "/dashboard/orders" : "";
-
 
   return (
     <div className="header">
@@ -58,12 +57,12 @@ export const Header = () => {
         </NavLink>
         {adminLoggedIn && (
           <>
-          <NavLink to={`${homePath1}`} style={navigationStyle}>
-            UserInfo
-          </NavLink>
-          <NavLink to={`${homePath2}`} style={navigationStyle}>
-            Orders
-          </NavLink>
+            <NavLink to={`${homePath1}`} style={navigationStyle}>
+              UserInfo
+            </NavLink>
+            <NavLink to={`${homePath2}`} style={navigationStyle}>
+              Orders
+            </NavLink>
           </>
         )}
         <div>

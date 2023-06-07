@@ -25,7 +25,7 @@ const ItemDetail = () => {
   const getById = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:5000/api/Items/${itemID}`,
+        `https://jayy-pos5.onrender.com/api/Items/${itemID}`,
       );
       setItem(data.data);
       console.log(data.data);
@@ -34,15 +34,12 @@ const ItemDetail = () => {
     }
   };
 
-
   return (
     <>
       <div className="container">
         <div className="card details-card ">
           <div className="row">
-            <div>
-              {item && <img src={item.image_url} alt="" />}
-            </div>
+            <div>{item && <img src={item.image_url} alt="" />}</div>
             <div className=" description-container ">
               <div className="main-description">
                 <div>
