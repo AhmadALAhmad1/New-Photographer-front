@@ -8,6 +8,7 @@ import PhotoAlbum from "react-photo-album";
 import { Link } from "react-router-dom";
 import {
   ReactCompareSlider,
+  
   ReactCompareSliderImage,
 } from "react-compare-slider";
 import { ImageDivider } from "../components/ImageDivider.jsx";
