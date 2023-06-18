@@ -4,8 +4,11 @@ import { NavLink } from "react-router-dom";
 import "../styles/Header.css";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import LoginIcon from "@mui/icons-material/Login";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useLocation } from "react-router-dom";
 import axios from "axios";
+import secureLocalStorage from "react-secure-storage";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const navigationStyle = ({ isActive }) => ({
   color: isActive ? "gray" : "white",
@@ -13,20 +16,32 @@ const navigationStyle = ({ isActive }) => ({
 });
 
 export const Header = () => {
-  const adminLoggedIn = localStorage.getItem("role") === "admin";
+  const adminLoggedIn = secureLocalStorage.getItem("role") === "admin";
   console.log(localStorage.getItem("role"));
-  const userLoggedIn = localStorage.getItem("role") !== null;
+  const userLoggedIn = secureLocalStorage.getItem("role") !== null;
   const navigate = useNavigate();
 
+
+  const successToast = () => {
+    toast.success("You logged Out !", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+
   const handleLogout = async () => {
-    try {
-      await axios.post(`https://jayy-pos5.onrender.com/api/users/logout`);
-      localStorage.removeItem("token");
-      localStorage.removeItem("role");
+    window.localStorage.clear();
+    successToast();
+    setTimeout(() => {
+      window.location.reload();
       navigate("/");
-    } catch (error) {
-      console.log(error);
-    }
+    }, 2000); 
   };
 
   // const adminLoggedIn = true;

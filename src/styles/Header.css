@@ -8,7 +8,6 @@
 
 .navigation-bar {
   display: flex;
-  margin-left: 650px;
   justify-content: space-evenly;
   width: 50%;
   margin-top: 20px;

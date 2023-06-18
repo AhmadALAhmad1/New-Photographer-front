@@ -1,4 +1,4 @@
-.login-container {
+/* .login-container {
   text-align: center;
   width: 100%;
   height: 100vh;
@@ -8,8 +8,8 @@
 
 background: rgb(2,0,36);
 background: radial-gradient(circle, rgba(2,0,36,1) 24%, rgba(228,216,216,1) 56%, rgba(0,0,0,0) 89%);
-}
-
+} */
+/* 
 .coverImage-login {
   width: 45vw;
   height: 70vh;
@@ -33,18 +33,18 @@ background: radial-gradient(circle, rgba(2,0,36,1) 24%, rgba(228,216,216,1) 56%,
   display: flex;
   flex-direction: column;
   /* gap:2vh; */
-  align-items: center;
-  border-radius: 10px;
-}
+  /* align-items: center;
+  border-radius: 10px; */
+/* } */
 
-.logoImage-login {
+/* .logoImage-login {
   height: 90px;
   width: 200px;
   margin: 4rem;
   align-items: center;
-}
+}  */
 
-.userEmail-title,
+/* .userEmail-title,
 .userPassword-title {
   width: 20vw;
   height: 5vh;
@@ -55,8 +55,8 @@ background: radial-gradient(circle, rgba(2,0,36,1) 24%, rgba(228,216,216,1) 56%,
   background-color: #eae9e988;
   display: flex;
   align-items: center;
-}
-
+} */
+/* 
 .userEmail-title input,
 .userPassword-title input {
   background-color: transparent;
@@ -177,4 +177,4 @@ background: radial-gradient(circle, rgba(2,0,36,1) 24%, rgba(228,216,216,1) 56%,
     width: 100%;
     height: 5vh;
   }
-}
+} */

@@ -8,13 +8,13 @@ import PhotoAlbum from "react-photo-album";
 import { Link } from "react-router-dom";
 import {
   ReactCompareSlider,
-  
   ReactCompareSliderImage,
 } from "react-compare-slider";
 import { ImageDivider } from "../components/ImageDivider.jsx";
 import "../styles/Home.css";
 import AboutHeader from "../components/About/AboutHeader/AboutHeader";
 import { PhotosGrid } from "../components/PhotosGrid";
+import LogoSlider from "../components/LogoSlider";
 
 export const Home = () => {
   const [side_images, setSide_images] = useState([]);
@@ -36,7 +36,7 @@ export const Home = () => {
       w: width,
       h: height,
       image,
-    }))
+    }));
   console.log("photoAlbumImages:", photoAlbumImages);
 
   const photoDivided = side_images
@@ -84,7 +84,7 @@ export const Home = () => {
         {photoAlbumImages.length && (
           <section className="section-2">
             <PhotosGrid
-            key='photoGrid'
+              key="photoGrid"
               // layout="masonry"
               // photos={[photoAlbumImages[1], photoAlbumImages[0]]}
               photos={photoAlbumImages}
@@ -178,6 +178,10 @@ export const Home = () => {
               />
             ))}
         </section>
+      </div>
+
+      <div className="logo-sec">
+        <LogoSlider />
       </div>
     </div>
   );

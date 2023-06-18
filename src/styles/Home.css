@@ -98,3 +98,8 @@
   width: 50%;
   margin: auto;
 }
+
+.logo-sec{
+  height: 30vh;
+  background-image: radial-gradient(rgb(250, 250, 250),rgb(200, 200, 200) ,rgb(130, 130, 130) );
+}

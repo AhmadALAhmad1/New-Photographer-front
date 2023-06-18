@@ -16,7 +16,8 @@ import { DashboardServices } from "./Dashboard/DashboardServices";
 
 // import AboutHeader from "./components/About/AboutHeader/AboutHeader";
 import Checkout from "./pages/Checkout";
-import Login from "./pages/Login/Login";
+// import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
 import { HomeDashboard } from "./Dashboard/HomeDashboard";
 import Error from "./pages/Error";
 // ============================ADMIN========================
@@ -25,15 +26,21 @@ import UpdateItem from "./Dashboard/UpdateItem";
 import AddItem from "./Dashboard/AddItem";
 import UserInfo from "./Dashboard/UserInfo";
 import { Orders } from "./Dashboard/Orders";
-
+import { LogoDev } from "@mui/icons-material";
+import LogoSlider from "./components/LogoSlider";
+import secureLocalStorage from "react-secure-storage";
+import { ToastContainer } from "react-toastify";
 function App() {
-  const isAdmin = localStorage.getItem("role") === "admin";
+
+   const isAdmin = secureLocalStorage.getItem("role") === "admin";
   const checkAdminAccess = (element) => {
-    return isAdmin ? element : <Error />;
+    return isAdmin ? element : <Navigate to="/Error" replace />;
   };
   console.log("IsAdmin:", isAdmin);
 
   return (
+    <> 
+    <ToastContainer/>
     <BrowserRouter>
       {/* <Header / > */}
       <div className="app">
@@ -43,11 +50,13 @@ function App() {
           <Route exact path="/services" element={<Services />} />
           <Route exact path="/shop" element={<Shop />} />
           <Route path="shop/:itemID" element={<ItemDetails />} />
-          <Route path="/login" element={<Login />} />
+          {/* <Route path="/login" element={<Login />} /> */}
+          <Route path="/login" element={<Register />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route path="/Error" element={<Error />} />
+          <Route path="/logo" element={<LogoSlider/>} />
 
           <Route
             path="/dashboard/*"
@@ -81,6 +90,7 @@ function App() {
         <Footer />
       </div>
     </BrowserRouter>
+    </>
   );
 }
 

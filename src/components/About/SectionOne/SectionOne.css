@@ -52,7 +52,7 @@ ul {
 }
 
 
-li {
+.about--section-one-container li {
     background: url('./check.png') no-repeat  left center / 23px; 
     padding-left: 0px;
     padding-inline-start:2rem;
