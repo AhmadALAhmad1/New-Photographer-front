@@ -4,7 +4,7 @@ import { SideImage } from "../components/SideImage";
 import photographerBckgrnd from "../images/photographer.jpg";
 import axios from "axios";
 import { API_URL } from "../constants";
-import PhotoAlbum from "react-photo-album";
+// import PhotoAlbum from "react-photo-album";
 import { Link } from "react-router-dom";
 import {
   ReactCompareSlider,
@@ -16,6 +16,8 @@ import AboutHeader from "../components/About/AboutHeader/AboutHeader";
 import { PhotosGrid } from "../components/PhotosGrid";
 import LogoSlider from "../components/LogoSlider";
 
+import Header from "../components/Header";
+import ScrollToTop from "../components/UpScroller/UpScroller"
 export const Home = () => {
   const [side_images, setSide_images] = useState([]);
   useEffect(() => {
@@ -47,13 +49,8 @@ export const Home = () => {
   console.log("photoDivided:", photoDivided);
   return (
     <div className="home">
-      <div className="home-one">
-        <AboutHeader backgroundImage={photographerBckgrnd} minHeight={"90vh"} />
-        {/* <img
-          src={photographerBckgrnd}
-          alt="backgroundImage"
-          className="HomeBackgrnd"
-        /> */}
+      <div className="home-one" >
+        <Header />
       </div>
       <div className="home-two">
         <section className="section-1">
@@ -84,11 +81,11 @@ export const Home = () => {
         {photoAlbumImages.length && (
           <section className="section-2">
             <PhotosGrid
-              key="photoGrid"
+              key='photoGrid'
               // layout="masonry"
               // photos={[photoAlbumImages[1], photoAlbumImages[0]]}
               photos={photoAlbumImages}
-              // columns={3}
+            // columns={3}
             />
           </section>
         )}

@@ -5,7 +5,7 @@ import React from "react";
 export const LinkdinIcon = () => {
   return (
     <div>
-      <a href="https://www.linkedin.com/in/jay-khawand-83531b137/?originalSubdomain=lb">
+      <a href="https://www.linkedin.com/in/jay-khawand-83531b137">
         <FontAwesomeIcon
           icon={faLinkedin}
           size="lg"

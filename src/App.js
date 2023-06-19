@@ -1,19 +1,19 @@
 import "./App.css";
 import { Navigate } from "react-router-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Header } from "./components/Header";
+import { Routes, Route } from "react-router-dom";
+// import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Home } from "./pages/Home";
-import { GalleryDashboard } from "./pages/GalleryDashboard";
+// import { GalleryDashboard } from "./pages/GalleryDashboard";
 import { Gallery } from "./pages/Gallery";
 import { Services } from "./pages/Services";
-import Shop from "./pages/Shop";
+// import Shop from "./pages/Shop";
 import ItemDetails from "./pages/ItemDetails";
 import { Contact } from "./components/Contact/Contact";
 import About from "./components/About/About";
 import { NotFound } from "./pages/NotFound";
 import { DashboardServices } from "./Dashboard/DashboardServices";
-
+import ComingSoonPage from "./pages/CommingSoon/Soon";
 // import AboutHeader from "./components/About/AboutHeader/AboutHeader";
 import Checkout from "./pages/Checkout";
 // import Login from "./pages/Login/Login";
@@ -26,29 +26,29 @@ import UpdateItem from "./Dashboard/UpdateItem";
 import AddItem from "./Dashboard/AddItem";
 import UserInfo from "./Dashboard/UserInfo";
 import { Orders } from "./Dashboard/Orders";
-import { LogoDev } from "@mui/icons-material";
+// import { LogoDev } from "@mui/icons-material";
 import LogoSlider from "./components/LogoSlider";
 import secureLocalStorage from "react-secure-storage";
 import { ToastContainer } from "react-toastify";
+import ScrollToTop from "./components/UpScroller/UpScroller";
 function App() {
 
-   const isAdmin = secureLocalStorage.getItem("role") === "admin";
+  const isAdmin = secureLocalStorage.getItem("role") === "admin";
   const checkAdminAccess = (element) => {
     return isAdmin ? element : <Navigate to="/Error" replace />;
   };
   console.log("IsAdmin:", isAdmin);
 
   return (
-    <> 
-    <ToastContainer/>
-    <BrowserRouter>
+    <>
+      <ToastContainer />
       {/* <Header / > */}
       <div className="app">
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/gallery" element={<Gallery />} />
           <Route exact path="/services" element={<Services />} />
-          <Route exact path="/shop" element={<Shop />} />
+          <Route exact path="/shop" element={<ComingSoonPage />} />
           <Route path="shop/:itemID" element={<ItemDetails />} />
           {/* <Route path="/login" element={<Login />} /> */}
           <Route path="/login" element={<Register />} />
@@ -56,7 +56,7 @@ function App() {
           <Route exact path="/about" element={<About />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route path="/Error" element={<Error />} />
-          <Route path="/logo" element={<LogoSlider/>} />
+          <Route path="/logo" element={<LogoSlider />} />
 
           <Route
             path="/dashboard/*"
@@ -73,7 +73,7 @@ function App() {
           />
           <Route path="/dashboard/userinfo" element={checkAdminAccess(<UserInfo />)} />
           <Route path="/dashboard/orders" element={checkAdminAccess(<Orders />)} />
-          
+
 
           {/* Fatima */}
           {/* <Route exact path="/dashboard/" element={<Home />} /> */}
@@ -87,9 +87,9 @@ function App() {
           <Route exact path="/dashboard/contact" element={<Contact />} />
           <Route exact path="*" element={<NotFound />} />
         </Routes>
+        <ScrollToTop />
         <Footer />
       </div>
-    </BrowserRouter>
     </>
   );
 }

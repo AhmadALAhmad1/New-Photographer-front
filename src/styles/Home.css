@@ -4,10 +4,14 @@
   margin-bottom: 0;
   background-color: #000000;
 }
-.home {
-  background-color: #000000;
-}
 
+.home-one{
+  height: 100vh;
+  background-image: url(../images/photographer.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+}
 .home-two {
   display: grid;
   grid-template-columns: 1fr 1fr;
