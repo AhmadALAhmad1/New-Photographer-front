@@ -1,6 +1,6 @@
 .about--header-parallax {
     /* The image used */
-    background-image: url("ba.jpg");
+    background-image: url("../../../images/ba.jpg");
   
     /* Set a specific height */
     min-height: 500px;

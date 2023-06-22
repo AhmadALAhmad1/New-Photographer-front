@@ -17,10 +17,17 @@
 }
 
 .content {
-  text-align: center;
   color: white;
   position: relative;
   z-index: 1;
+  position: absolute;
+  /* top: 500px; */
+  top: auto;
+  margin: 2%;
+  border: 1px solid rgb(158, 154, 154);
+  padding: 40px;
+  border-radius: 25px;
+  background-color: #504f4fd5;
 }
 
 .title {
@@ -50,21 +57,24 @@
 }
 
 .home-button:hover {
-  background-color: #333;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .card-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 0px;
 }
 
 .card {
-  background-color: white;
-  width: 300px;
+  background-color: rgb(138, 131, 131);
+  width: 200px;
+  height: 100px;
   padding: 20px;
-  margin: 0 10px;
-  border-radius: 5px;
+  margin: 10px 10px;
+  border-radius: 15px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -82,8 +92,31 @@
 
 .card-description {
   font-size: 16px;
-  color: gray;
+  color: rgb(41, 2, 1);
 }
 .commingsoon-Header{
   background-color: #000;
+}
+
+@media (max-width:768px) {
+  .background {
+    background-color: #000;
+    height: 100vh;
+    display: grid;
+  }
+  .content{
+    position: absolute;
+    top: 230px;
+
+  }
+
+  .card {
+    width: 250px;
+    padding: 20px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
 }

@@ -67,8 +67,10 @@
   }
 
   .ul-section-one {
-    font-size: 15px;
+    width: 100%;
+    font-size: 17px;
     display: flex;
-    align-self: center;
+    align-items: center;
+    /* align-self: center; */
   }
 }

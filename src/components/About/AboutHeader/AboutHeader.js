@@ -10,7 +10,6 @@ function AboutHeader({ backgroundImage, minHeight = "400px" }) {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-
   };
 
   return (

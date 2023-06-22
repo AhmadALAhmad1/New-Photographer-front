@@ -2,8 +2,8 @@
   color: whitesmoke;
   display: flex;
   flex-direction: column;
+  width: 100%;
   align-items: center;
-  justify-content: space-around;
 }
 
 .About-Section2-Body {
@@ -19,14 +19,15 @@ margin-top: 3%;
 .horizontal {
   border: none;
   background-color: grey;
-  /* color: whitesmoke; */
+  color: whitesmoke;
 width: 100%;
-  height: 1px;
+  height: 2px;
+  border-radius: 15px;
 }
 .about--section-two-card-container {
   border-radius: 5%;
   margin: auto;
-  width: 320px;
+  width: 520px;
   position: relative;
   overflow: hidden;
   justify-content: space-around;
@@ -38,9 +39,9 @@ width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 65px;
   /* justify-content: center; */
   /* align-self: center; */
-  gap: 3rem;
 }
 
 .about--section-two-card-container:before {
@@ -57,9 +58,9 @@ width: 100%;
 }
 
 .about--section-two-card-container img {
-  display: block;
+  /* display: block; */
   width: 100%;
-  height: auto;
+  object-fit:contain;
   transition: filter 0.5s ease;
   z-index: 0;
 }
@@ -72,13 +73,14 @@ width: 100%;
   position: absolute;
   height: 100%;
   bottom: 0;
-  padding: 1rem;
+  padding: 2rem;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: whitesmoke;
+  width: 90%;
+  color: #fff;
   font-size: 1.5rem;
   font-weight: bold;
   transform: translateY(100%);
@@ -86,14 +88,14 @@ width: 100%;
 }
 
 .overlay-text h2 {
-  font-weight: 400;
+  font-weight: bolder;
   margin-top: 0;
 }
 .overlay-text p {
+  text-align: center;
   display: flex;
   font-weight: 100;
-  justify-self: center;
-  width: 90%;
+  width: 100%;
   font-size: 1.1rem;
   margin-top: 0;
 }
@@ -101,9 +103,12 @@ width: 100%;
 .test {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
  align-self: center;
- margin-top: 5%;
+ margin-top: 8%;
 }
 
 #disabled {
@@ -161,15 +166,18 @@ width: 100%;
 }
 
 @media (max-width:768px) {
+  .team-cards{
+    gap:20px
+  }
   .test{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 150px;
    align-self: center;
    margin-top: 5%;
    margin-bottom: 30px;
   }
   .about--section-two-card-container {
-    width: 75%;
+    width: 50%;
     }
 }
