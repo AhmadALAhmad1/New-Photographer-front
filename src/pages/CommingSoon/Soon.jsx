@@ -11,7 +11,7 @@ class ComingSoonPage extends React.Component {
         </div>
         <div className="background">
           <div className="backdrop" />
-          <div className=".content-S">
+          <div className="content-S">
             <h1 className="title">Jay Khawand's Shop</h1>
             <p className="description">We're currently working on something amazing. Stay tuned!</p>
             <a href="/services" className="home-button">Explore More</a>

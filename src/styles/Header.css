@@ -21,10 +21,11 @@
   opacity: 85%;
 }
 
+
+
 .header__logo img {
   display: flex;
   width: 80%;
-  border-radius: 50%;
 }
 
 .header__logo img:hover {
@@ -111,6 +112,10 @@ height: auto;
     display: none;
   }
 
+  .header__logo{
+    width: 100%;
+  }
+
   .burger-menu {
     display: flex;
     align-items: center;
@@ -128,6 +133,14 @@ height: auto;
   }
 }
 
+
+
+@media screen and (max-width: 500px) {
+
+.header__logo img {
+  width: 120%;
+}
+}
 @media screen and (orientation: landscape) {
   .burger-menu-items {
     top: 50px;
