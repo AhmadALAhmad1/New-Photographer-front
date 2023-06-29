@@ -100,12 +100,12 @@ export const Services = () => {
           )}
         </div>
       </div>
-      <div>
+      <div className="Services-3-Body">
         <div className="services-students-offers">
           <h1>We Also Offer Educational Services </h1>
         </div>
         <div className="sideServ">
-          <div style={{ width: "50%" }}>
+          {/* <div style={{ width: "50%" }}>
             {side_images
               .filter((img) => img.page === "services" && img.section === 1)
               .map((img) => (
@@ -115,9 +115,9 @@ export const Services = () => {
                   className="side-image"
                 />
               ))}
-          </div>
+          </div> */}
           <div className="services-offers">
-            {studentStartIndex === 0 ? (
+            {/* {studentStartIndex === 0 ? (
               <Button
                 id="disabled"
                 className="about-nofunction-button"
@@ -136,7 +136,7 @@ export const Services = () => {
                   {"«"}
                 </span>
               </Button>
-            )}
+            )} */}
             {studentServices
               .filter((service) => service.status === "student")
               .slice(studentStartIndex, studentStartIndex + 3)

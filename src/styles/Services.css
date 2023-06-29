@@ -61,21 +61,28 @@
 .services-plans {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .img-pricing {
   height: 100%;
-  width: 100%;
+  width: 95%;
+  border-radius: 12px;
 }
 
 .services-pricings-plans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
   background-image: radial-gradient(
     rgb(250, 250, 250),
     rgb(200, 200, 200),
     rgb(130, 130, 130)
   );
-  height: 800px;
+  min-height: 100%;
 }
 
 .title-pricing-plans h1,
@@ -86,7 +93,7 @@
 }
 
 .title-pricing-plans {
-  margin: auto;
+margin-bottom: 3%;
 }
 
 .pricing-body h1 {
@@ -95,51 +102,52 @@
 }
 
 .services-student-offer {
-  width: 100%;
-  height: 100%;
-}
-.services-students-offers {
-  background-color: #1b1b1b;
-  margin-top: 0;
-  color: white;
-}
-
-.services-students-offers h1 {
-  text-align: center;
-  background-color: #1b1b1b;
+width: auto;
+padding: 1%;
+height: auto;
+border-radius: 15px;
+  white-space: pre-line;
+border: 3px solid #ffffff9f;
 }
 
-.side-image {
-  height: 513px;
-  width: 912px;
-}
+
+
+
+
 
 .sideServ {
   display: flex;
-  justify-content: space-evenly;
-  height: 800px;
-
+min-height: 800px;
   align-items: center;
-  background-color: #1b1b1b;
 }
-
+.Services-3-Body{
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  background-color: #1b1b1b;
+flex-direction: column;
+}
 .offer-body {
   color: white;
   text-align: center;
   line-height: 40px;
-  white-space: pre-line;
-  padding-top: 0;
+width: 250px;
+
 }
 
 .services-offers {
   display: flex;
-  justify-content: space-around;
-  width: 40%;
+  flex-wrap: wrap;
+  gap: 8%;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  min-height: 100%;
 }
 
-.offer-body p {
+/* .offer-body p {
   font-size: 15px;
-}
+} */
 
 /* .popUpForm {
   width: 100%;
@@ -234,3 +242,37 @@
 .button-form:hover {
   background-color: rgb(170, 30, 30);
 } */
+
+
+@media (max-width:768px) {
+  .features {
+  display: flex;
+  flex-direction: column;
+  }
+  .services-plans {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+  .sideServ {
+    display: flex;
+    justify-content: space-around;
+  min-height: 800px;
+    align-items: center;
+  }
+  .services-offers{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  }
+  .services-student-offer {
+    margin: 3%;
+  }
+  .services-students-offers h1 {
+    padding-top: 10%;
+    margin-bottom: 5%;
+  }
+
+}
