@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Gallery.css";
-import Header from "../../components/Header";
+import AboutHeader from "../../components/About/AboutHeader/AboutHeader";
+import image from "../../images/ba.jpg";
 
 const GalleryBeta = () => {
   const [categories, setCategories] = useState([]);
@@ -54,7 +55,7 @@ const GalleryBeta = () => {
 
   return (
     <>
-      {/* <Header /> */}
+          <AboutHeader backgroundImage={image} />
 
       <div className="container-gallery">
         <h1>Gallery Page</h1>
