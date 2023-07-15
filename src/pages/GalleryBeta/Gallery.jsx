@@ -89,7 +89,7 @@ const GalleryBeta = () => {
           ) : (
             // Show actual images
             filteredImages.map((image) => (
-              git <img
+              <img
                 key={image._id}
                 src={image.image}
                 className="gallery-image"
