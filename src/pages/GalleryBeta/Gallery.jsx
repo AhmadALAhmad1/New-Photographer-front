@@ -3,12 +3,14 @@ import axios from "axios";
 import "./Gallery.css";
 import AboutHeader from "../../components/About/AboutHeader/AboutHeader";
 import image from "../../images/ba.jpg";
+import Skeleton from "../../components/Loaders/SkeletonLoader./Skeleton";
 
 const GalleryBeta = () => {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [images, setImages] = useState([]);
   const [filteredImages, setFilteredImages] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     fetchCategories();
@@ -20,7 +22,6 @@ const GalleryBeta = () => {
       const response = await axios.get(
         "https://jayy-pos5.onrender.com/api/category/",
       );
-      console.log(response.data);
       setCategories(response.data);
     } catch (error) {
       console.error(error);
@@ -33,15 +34,20 @@ const GalleryBeta = () => {
         "https://jayy-pos5.onrender.com/api/gallery/get",
       );
       setImages(response.data.data);
-      console.log(response.data);
     } catch (error) {
       console.error(error);
     }
   };
 
   const handleCategorySelect = (categoryId) => {
+    setIsLoading(true);
     setSelectedCategory(categoryId);
     filterImages(categoryId);
+
+    // Simulate loading for 5 seconds
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
   };
 
   const filterImages = (categoryId) => {
@@ -55,7 +61,7 @@ const GalleryBeta = () => {
 
   return (
     <>
-          <AboutHeader backgroundImage={image} />
+      <AboutHeader backgroundImage={image} />
 
       <div className="container-gallery">
         <h1>Gallery Page</h1>
@@ -71,9 +77,25 @@ const GalleryBeta = () => {
           ))}
         </div>
         <div className="image-grid">
-          {filteredImages.map((image) => (
-            <img key={image._id} src={image.image} className="gallery-image" />
-          ))}
+          {isLoading ? (
+            <>
+              <Skeleton />
+              <>
+                <div className="gallery-image skeleton-loading"></div>
+                <div className="gallery-image skeleton-loading"></div>
+                <div className="gallery-image skeleton-loading"></div>
+              </>
+            </>
+          ) : (
+            // Show actual images
+            filteredImages.map((image) => (
+              git <img
+                key={image._id}
+                src={image.image}
+                className="gallery-image"
+              />
+            ))
+          )}
         </div>
       </div>
     </>
