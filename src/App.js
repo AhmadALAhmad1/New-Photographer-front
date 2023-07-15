@@ -80,8 +80,8 @@ function App() {
           />
           <Route path="/dashboard/userinfo" element={checkAdminAccess(<UserInfo />)} />
           <Route path="/dashboard/orders" element={checkAdminAccess(<Orders />)} />
-          <Route path="/dashboard/gallery" element={<GalleryDashboard />} />
-          <Route path="/dashboard/Category" element={<CategoryDashboard />} />
+          <Route path="/dashboard/gallery" element={checkAdminAccess(<GalleryDashboard />)} />
+          <Route path="/dashboard/Category" element={checkAdminAccess(<CategoryDashboard />)} />
 
 
           {/* Fatima */}
