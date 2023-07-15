@@ -5,28 +5,28 @@ import { useState } from "react";
 import "../styles/Services.css";
 import { ServicesBackground } from "../components/ServicesBackground";
 import { ServicesPricingPlan } from "../components/ServicesPricingPlan";
-import { SideImage } from "../components/SideImage";
+// import { SideImage } from "../components/SideImage";
 import { Button } from "@mui/material";
 import { ServicesStudentsOffer } from "../components/ServicesStudentsOffer";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import { ServicePricingForm } from "./ServicesDashboard/ServicePricingForm";
 import { DeleteButton } from "../Dashboard/DashboardCommon/DeleteButton";
 import "../styles/Dashboard.css";
-import { ImageForm } from "./DashboardCommon/ImageForm";
+// import { ImageForm } from "./DashboardCommon/ImageForm";
 
 export const DashboardServices = () => {
   const [studentServices, setStudentServices] = useState([]);
   const [customerServices, setCustomerServices] = useState([]);
-  const [side_images, setSide_images] = useState([]);
+  // const [side_images, setSide_images] = useState([]);
   const [studentStartIndex, setStudentStartIndex] = useState(0);
   const [customerStartIndex, setCustomerStartIndex] = useState(0);
 
-  useEffect(() => {
-    axios
-      .get(`${API_URL}/images`)
-      .then((res) => setSide_images(res.data))
-      .catch((err) => console.log(err));
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get(`https://jayy-pos5.onrender.com/api/images`)
+  //     .then((res) => setSide_images(res.data))
+  //     .catch((err) => console.log(err));
+  // }, []);
 
   const getServices = () => {
     axios
@@ -146,7 +146,7 @@ export const DashboardServices = () => {
           />
         </div>
         <div className="sideServ">
-          <div style={{ width: "40%" }}>
+          {/* <div style={{ width: "40%" }}>
             {side_images
               .filter((img) => img.page === "services" && img.section === 1)
               .map((img) => (
@@ -159,7 +159,7 @@ export const DashboardServices = () => {
                   <ImageForm imageSource={img} visible />
                 </>
               ))}
-          </div>
+          </div> */}
 
           <div className="services-offers">
             {studentStartIndex === 0 ? (

@@ -32,12 +32,33 @@
   cursor: pointer;
 }
 
-.logout-btn,
+
 .header-login-btn {
   color: white;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.logout-btn{
+  color: white;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-.logout-btn,
+.logout-btn:hover{
+opacity: 80%;
+border-radius: 50%;
+}
+
 .header-login-btn:hover {
   opacity: 80%;
 }

@@ -32,8 +32,7 @@ export const Header = () => {
   const handleLogout = async () => {
     try {
       await axios.post(`https://jayy-pos5.onrender.com/api/users/logout`);
-      localStorage.removeItem("token");
-      localStorage.removeItem("role");
+      localStorage.clear();
       navigate("/");
     } catch (error) {
       console.log(error);

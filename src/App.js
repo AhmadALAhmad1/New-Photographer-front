@@ -28,14 +28,13 @@ import UserInfo from "./Dashboard/UserInfo";
 import { Orders } from "./Dashboard/Orders";
 // import { LogoDev } from "@mui/icons-material";
 import LogoSlider from "./components/LogoSlider";
-import secureLocalStorage from "react-secure-storage";
 import { ToastContainer } from "react-toastify";
 import ScrollToTop from "./components/UpScroller/UpScroller";
 function App() {
 
-  const isAdmin = secureLocalStorage.getItem("role") === "admin";
+  const isAdmin = localStorage.getItem("role") === " 7";
   const checkAdminAccess = (element) => {
-    return isAdmin ? element : <Navigate to="/Error" replace />;
+    return isAdmin ? element : <Navigate to="/" replace />;
   };
   console.log("IsAdmin:", isAdmin);
 

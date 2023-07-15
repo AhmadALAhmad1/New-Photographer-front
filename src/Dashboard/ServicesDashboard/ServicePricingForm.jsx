@@ -30,7 +30,7 @@ export const ServicePricingForm = ({
 
     if (id) {
       await axios({
-        url: `${API_URL}/services/${id}`,
+        url: `https://jayy-pos5.onrender.com/api/services/${id}`,
         data: formData,
         method: "PUT",
         headers: {
@@ -41,7 +41,7 @@ export const ServicePricingForm = ({
         .catch(onError);
     } else {
       await axios({
-        url: `${API_URL}/services`,
+        url: `https://jayy-pos5.onrender.com/api/services`,
         data: formData,
         method: "POST",
         headers: {

@@ -4,19 +4,18 @@ import { SideImage } from "../components/SideImage";
 import photographerBckgrnd from "../images/photographer.jpg";
 import axios from "axios";
 import { API_URL } from "../constants";
-import PhotoAlbum from "react-photo-album";
 import { Link } from "react-router-dom";
 import {
   ReactCompareSlider,
   ReactCompareSliderImage,
 } from "react-compare-slider";
 import "../styles/Home.css";
-import AboutHeader from "../components/About/AboutHeader/AboutHeader";
+// import AboutHeader from "../components/About/AboutHeader/AboutHeader";
 import { ImageForm } from "./DashboardCommon/ImageForm";
 import "../styles/Dashboard.css";
 import { PhotosGrid } from "../components/PhotosGrid";
 import { GridPopupForm } from "../components/GridPopupForm";
-
+import Header from "../components/Header";
 export const HomeDashboard = () => {
   const [side_images, setSide_images] = useState([]);
 
@@ -49,8 +48,8 @@ export const HomeDashboard = () => {
   console.log("photoDivided:", photoDivided);
   return (
     <div className="home">
-      <div className="home-one">
-        <AboutHeader backgroundImage={photographerBckgrnd} minHeight={"90vh"} />
+      <div className="home-one" >
+        <Header />
       </div>
       <div className="home-two">
         <section className="section-1">

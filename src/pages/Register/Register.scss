@@ -183,7 +183,7 @@ height: 55px;
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, orange 0%,orange 100%);
+  background-image: linear-gradient(-50deg, rgb(221, 217, 217) 10%,rgb(0, 0, 0) 100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -245,7 +245,7 @@ height: 55px;
 
 .btn-login.transparent:hover{
   color: rgb(255, 255, 255);
-  background: none;
+  background: black;
   border: 2px solid #000000;
   width: 1305x;
   height: 43px;

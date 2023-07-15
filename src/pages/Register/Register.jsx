@@ -22,7 +22,7 @@ const Register = () => {
   const emailRef = useRef();
 
   const navigate = useNavigate();
-  const location = useLocation();
+  // const location = useLocation();
 
   const successToast = () => {
     toast.success("Successfully Logged In", {
@@ -126,13 +126,14 @@ const Register = () => {
         email,
         password,
       });
-      secureLocalStorage.setItem("token", res.data.token);
-      secureLocalStorage.setItem("role", res.data.role);
-      secureLocalStorage.setItem("loggedIn", true);
+      // console.log(res);
+      localStorage.setItem("token", res.data.token);
+      localStorage.setItem("role", res.data.role);
+      localStorage.setItem("loggedIn", true);
       setErrMsg("You are logged in");
       setTimeout(() => setErrMsg(""), 3000);
       successToast();
-      navigate("/");
+      navigate("/dashboard");
       // Show the toastify success message
     } catch (err) {
       if (!err?.response) {
