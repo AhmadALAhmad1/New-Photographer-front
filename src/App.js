@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import { Footer } from "./components/Footer";
 import { Home } from "./pages/Home";
 // import { GalleryDashboard } from "./pages/GalleryDashboard";
-import { Gallery } from "./pages/Gallery";
+// import { Gallery } from "./pages/Gallery";
 import { Services } from "./pages/Services";
 // import Shop from "./pages/Shop";
 import ItemDetails from "./pages/ItemDetails";
@@ -30,6 +30,12 @@ import { Orders } from "./Dashboard/Orders";
 import LogoSlider from "./components/LogoSlider";
 import { ToastContainer } from "react-toastify";
 import ScrollToTop from "./components/UpScroller/UpScroller";
+import Gallery from "react-photo-gallery";
+import GalleryBeta from "./pages/GalleryBeta/Gallery";
+import GalleryDashboard from "./Dashboard/GallerybetaDashboard/GalleryDashboard";
+import CategoryDashboard from "./Dashboard/Categories/CategoryDashboard";
+// import { GalleryDashboard } from "./pages/GalleryDashboard";
+// import GalleryNavD from "./Dashboard/GalleryDashborad/GalleryNavD";
 function App() {
 
   const isAdmin = localStorage.getItem("role") === " 7";
@@ -45,7 +51,7 @@ function App() {
       <div className="app">
         <Routes>
           <Route exact path="/*" element={<Home />} />
-          <Route exact path="/gallery" element={<Gallery />} />
+          {/* <Route exact path="/gallery" element={<Gallery />} /> */}
           <Route exact path="/services" element={<Services />} />
           <Route exact path="/shop" element={<ComingSoonPage />} />
           <Route path="shop/:itemID" element={<ItemDetails />} />
@@ -57,6 +63,8 @@ function App() {
           <Route path="/Error" element={<Error />} />
           <Route path="/logo" element={<LogoSlider />} />
 
+          {/* Gallery Beta  */}
+          <Route exact path="/gallery" element={<GalleryBeta />} />
           <Route
             path="/dashboard/*"
             element={checkAdminAccess(<HomeDashboard />)}
@@ -72,11 +80,13 @@ function App() {
           />
           <Route path="/dashboard/userinfo" element={checkAdminAccess(<UserInfo />)} />
           <Route path="/dashboard/orders" element={checkAdminAccess(<Orders />)} />
+          <Route path="/dashboard/gallery" element={<GalleryDashboard />} />
+          <Route path="/dashboard/Category" element={<CategoryDashboard />} />
 
 
           {/* Fatima */}
           {/* <Route exact path="/dashboard/" element={<Home />} /> */}
-          <Route exact path="/dashboard/gallery" element={checkAdminAccess(<Gallery />)} />
+          {/* <Route exact path="/dashboard/gallery" element={checkAdminAccess(<GalleryNavD />)} /> */}
           <Route
             exact
             path="/dashboard/services"

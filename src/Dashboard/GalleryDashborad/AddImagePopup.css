@@ -1,0 +1,48 @@
+.add-image-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  z-index: 100;
+}
+
+.add-image-popup-content {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+
+
+.popup-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.popup-submit,
+.popup-cancel {
+  border: none;
+  width: 5vw;
+  height: 5vh;
+  font-size: medium;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup-cancel {
+  background-color: rgb(195, 49, 49);
+}
+
+.popup-submit:hover,
+.popup-cancel:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,16 @@
+.gallery-add-button {
+  margin: 10px;
+  padding: 10px 30px;
+  font-size: large;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+}
+.gallery-add-button:hover{
+    background-color: darkgray;
+    padding: 12px 32px;
+}
+
+.gallery-button-div{
+    height: 10vh;
+}

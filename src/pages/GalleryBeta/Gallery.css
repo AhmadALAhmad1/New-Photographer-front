@@ -1,0 +1,43 @@
+.container-gallery {
+  height: 100vh;
+  max-height: 800vh;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.filters button {
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  border-radius: 3px;
+
+  padding: 12px 24px;
+  font-size: 16px;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  transition: background-color 0.3s ease-out;
+}
+
+.filters button:hover {
+  background-color: #afafaf;
+}
+
+.image-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vw;
+  margin: 30px;
+}
+.gallery-image{
+height: 300px;
+width: 300px;
+}

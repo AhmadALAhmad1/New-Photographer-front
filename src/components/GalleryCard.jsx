@@ -6,7 +6,7 @@ export const GalleryCard = (props) => {
         <div className="pcard-container">
           <div className="pcard">
             <div className="pcard" onClick={props.onClick}>
-              <img className="pcardimg" style={{ width: '40rem' }} src={`data:image/jpeg;base64,${props.image}`} alt="makhasak" />
+              <img className="pcardimg" style={{ width: '30rem'}} src={`data:image/jpeg;base64,${props.image}`} alt="makhasak" />
             </div>
          </div>
         </div>
