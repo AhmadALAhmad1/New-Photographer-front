@@ -3,7 +3,7 @@ import axios from "axios";
 import "./Gallery.css";
 import AboutHeader from "../../components/About/AboutHeader/AboutHeader";
 import image from "../../images/ba.jpg";
-import Skeleton from "../../components/Loaders/SkeletonLoader./Skeleton";
+import Skeleton from "../../components/Loaders/SkeletonLoader/Skeleton.jsx"
 
 const GalleryBeta = () => {
   const [categories, setCategories] = useState([]);
