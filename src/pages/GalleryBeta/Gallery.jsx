@@ -37,6 +37,7 @@ const GalleryBeta = () => {
     } catch (error) {
       console.error(error);
     }
+    
   };
 
   const handleCategorySelect = (categoryId) => {
